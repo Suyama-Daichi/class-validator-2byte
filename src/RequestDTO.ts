@@ -3,11 +3,12 @@ import { IsByteLength, IsNotEmpty, IsString } from 'class-validator';
 
 export class RequestDTO {
   @ApiProperty({
-    description: '同期したい指標メタデータの配列',
+    example: 'テスト',
+    description: 'message (Japanese)',
     type: String,
   })
   @IsNotEmpty()
   @IsString()
-  @IsByteLength(1, 10)
-  name: string;
+  @IsByteLength(0, 6)
+  message: string;
 }
